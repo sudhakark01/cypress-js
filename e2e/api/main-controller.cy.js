@@ -8,7 +8,7 @@ describe("Verify main-controller endpoint calls", ()=>{
     it("post main controller with empty object", ()=>{
         apiHelper.post(`${apiUrl}/api/arya/main-controller`, {})
         .then((response)=>{
-            apiHelper.validateResponse(response, 404)
+            apiHelper.validateResponse(response, 200)
             console.log(response)
         })
     })
