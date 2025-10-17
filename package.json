@@ -1,0 +1,36 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome --headless",
+    "cy:run:firefox": "cypress run --browser firefix",
+    "cy:run:headed": "cypress run --headed",
+    "cu:run:spec": "cypress run --spec",
+    "test:parllel": "cypress run --parallel --record --key {YOUR_KEY}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@cypress/webpack-preprocessor": "^7.0.1",
+    "@cypress/xpath": "^2.0.3",
+    "babel-loader": "^10.0.0",
+    "cypress": "^15.4.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-real-events": "^1.15.0",
+    "dotenv": "^17.2.3",
+    "events": "^3.3.0",
+    "mocha": "^11.7.4",
+    "mochawesome": "^7.1.4",
+    "path-browserify": "^1.0.1"
+  }
+}
