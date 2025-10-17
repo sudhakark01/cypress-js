@@ -30,7 +30,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          headless: true
           config: baseUrl=${{ github.event.client_payload.url || secrets.BASE_URL }}
         env:
           BASE_URL: ${{ github.event.client_payload.url || secrets.BASE_URL }}
