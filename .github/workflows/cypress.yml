@@ -5,6 +5,10 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main ]
+  
+  repository_dispatch:
+    types: [run-tests]
+  workflow_dispatch: 
 
 jobs:
   cypress-run:
@@ -27,8 +31,9 @@ jobs:
         with:
           browser: chrome
           headless: true
+          config: baseUrl=${{ github.event.client_payload.url || secrets.BASE_URL }}
         env:
-          BASE_URL: ${{ secrets.BASE_URL }}
+          BASE_URL: ${{ github.event.client_payload.url || secrets.BASE_URL }}
           API_URL: ${{ secrets.API_URL }}
           TEST_USERNAME: ${{ secrets.TEST_USERNAME }}
           TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
