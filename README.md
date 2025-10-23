@@ -11,7 +11,7 @@ This project is a test automation framework built with Cypress for end-to-end te
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/sudhakark01/cypress-js.git
 cd cypress-js
 ```
 
